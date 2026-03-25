@@ -1,0 +1,50 @@
+# ─── Netlify Configuration ────────────────────────────────────
+# Anthony | Executive Coach & Mentor | Unleashing Genius
+# Deploy to Netlify: drag the project folder into app.netlify.com/drop
+# or connect the GitHub repo at app.netlify.com/start
+
+[build]
+  publish = "."        # Root directory — all files served from here
+
+# ─── Headers ──────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively; HTML always fresh
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ─── Redirects ────────────────────────────────────────────────
+# Enforce trailing-slash-free URLs
+[[redirects]]
+  from   = "/contact/thank-you/"
+  to     = "/contact/thank-you"
+  status = 301
+
+# Fallback 404
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
