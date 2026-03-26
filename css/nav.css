@@ -1,0 +1,190 @@
+/* ─────────────────────────────────────────────
+   NAV.CSS — Navigation styles
+   Anthony | Unleashing Genius
+───────────────────────────────────────────── */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  height: 64px;
+  transition: box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.nav-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo / Brand */
+.nav-brand {
+  font-family: var(--font-ui);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--offwhite);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-brand em {
+  font-style: normal;
+  color: var(--copper);
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--copper);
+}
+
+.nav-links .nav-cta a {
+  background: var(--copper);
+  color: white;
+  padding: 8px 18px;
+  margin-left: 8px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links .nav-cta a:hover {
+  background: var(--copper-lt);
+  color: white;
+}
+
+/* Mobile hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--offwhite);
+  transition: all 0.3s;
+}
+
+/* Hamburger → X animation */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile drawer */
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 0 24px;
+  z-index: 99;
+}
+
+.nav-drawer.open {
+  display: block;
+}
+
+.nav-drawer a {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  text-decoration: none;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-drawer a:hover,
+.nav-drawer a.active {
+  color: var(--copper);
+  background: rgba(255,255,255,0.03);
+}
+
+.nav-drawer .nav-drawer-cta {
+  margin: 16px 24px 0;
+}
+
+.nav-drawer .nav-drawer-cta a {
+  display: inline-block;
+  background: var(--copper);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-drawer .nav-drawer-cta a:hover {
+  background: var(--copper-lt);
+  color: white;
+}
+
+/* ── NAV SPACER ── */
+.nav-spacer {
+  height: 64px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-inner { padding: 0 24px; }
+}
