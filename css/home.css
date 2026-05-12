@@ -246,7 +246,7 @@
 /* ── STORY SECTION ── */
 .story-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 64px;
   align-items: start;
 }
@@ -254,6 +254,11 @@
 .story-sidebar {
   position: sticky;
   top: 88px;
+  order: 2;
+}
+
+.story-text {
+  order: 1;
 }
 
 .story-photo {
