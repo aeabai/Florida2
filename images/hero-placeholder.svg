@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#162E4A"/>
+  <rect x="0" y="880" width="800" height="120" fill="#0B1F3A"/>
+  <!-- Camera icon -->
+  <rect x="330" y="400" width="140" height="110" rx="10" fill="none" stroke="#C4882A" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="455" r="28" fill="none" stroke="#C4882A" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="455" r="12" fill="#C4882A" opacity="0.2"/>
+  <rect x="350" y="408" width="20" height="12" rx="4" fill="#C4882A" opacity="0.3"/>
+  <!-- Label -->
+  <text x="400" y="558" font-family="Georgia, serif" font-size="16" fill="#C4882A" opacity="0.6" text-anchor="middle">hero.jpg</text>
+  <text x="400" y="580" font-family="Georgia, serif" font-size="13" fill="#8A8A8A" opacity="0.5" text-anchor="middle">Drop your photo here</text>
+  <!-- Bottom label -->
+  <text x="400" y="930" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#C4882A" opacity="0.7" text-anchor="middle">Unleashing Genius</text>
+  <text x="400" y="960" font-family="Arial, sans-serif" font-size="11" fill="#5A5A5A" text-anchor="middle" letter-spacing="3">ANTHONY · EXECUTIVE COACH · FLORIDA</text>
+</svg>
