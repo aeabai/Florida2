@@ -413,7 +413,7 @@
 .track-home-card {
   background: var(--charcoal);
   padding: 48px 40px;
-  border-top: 4px solid var(--copper);
+  border-top: 4px solid #152E2E; /* Youth page hero banner */
   position: relative;
   overflow: hidden;
   transition: transform 0.3s;
@@ -421,8 +421,8 @@
   min-width: 0;
 }
 
-.track-home-card:nth-child(2) { border-color: var(--blue); }
-.track-home-card:nth-child(3) { border-color: var(--green); }
+.track-home-card:nth-child(2) { border-color: #3A1A10; } /* Reentry page hero banner */
+.track-home-card:nth-child(3) { border-color: var(--copper); } /* Coaching page banner accent */
 
 .track-home-card:hover { transform: translateY(-8px); }
 
