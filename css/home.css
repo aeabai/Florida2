@@ -644,9 +644,10 @@
   text-align: center;
 }
 
-.mission-seg:nth-child(1) { background: var(--charcoal); }
-.mission-seg:nth-child(2) { background: var(--blue); }
-.mission-seg:nth-child(3) { background: var(--green); }
+/* Mission bar colors follow locked track order: Youth → Reentry → Coaching */
+.mission-seg--youth { background: #152E2E; }
+.mission-seg--reentry { background: #3A1A10; }
+.mission-seg--coaching { background: var(--copper); }
 
 .mission-pct {
   font-family: var(--font-display);
