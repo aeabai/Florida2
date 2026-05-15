@@ -22,11 +22,18 @@
   text-align: center;
 }
 .testimonials-hero h1 {
-  font-size: clamp(42px, 6vw, 82px);
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
   color: var(--offwhite);
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
-.testimonials-hero h1 em { color: var(--copper); }
+.testimonials-hero h1 em {
+  display: block;
+  color: var(--copper);
+  font-size: 0.62em;
+  line-height: 0.98;
+}
 .testimonials-hero p {
   max-width: 860px;
   margin: 0 auto;
@@ -36,21 +43,21 @@
 }
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-  gap: 28px;
-  margin-top: 56px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 42px;
 }
 .featured-card {
   background: var(--offwhite);
-  padding: 40px;
+  padding: 28px;
   border-top: 5px solid var(--copper);
 }
 .featured-card blockquote {
   font-family: var(--font-display);
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.45;
   font-style: italic;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .featured-meta {
   font-family: var(--font-ui);
@@ -86,7 +93,6 @@
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-.pattern-section { background: var(--offwhite); }
 .share-experience-section {
   background: var(--warm-white);
   border-top: 1px solid rgba(0,0,0,0.06);
@@ -117,6 +123,8 @@
   color: var(--mid);
   margin-top: 18px;
 }
+
+.pattern-section { background: var(--offwhite); }
 .pattern-list {
   max-width: 820px;
   margin: 40px auto 0;
@@ -128,6 +136,21 @@
   padding: 24px 28px;
   border-left: 4px solid var(--copper);
 }
+
+@media (max-width: 1100px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  .featured-card blockquote {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonials-hero { padding: 120px 24px 80px; }
 }
@@ -206,6 +229,17 @@
 <div class="featured-card reveal">
   <blockquote>“The class in good in my eyes because it promotes positivity. While many trades men and women already demonstrate the abilities discussed in this class there are many that do not, but with this class maybe the other half will learn to adapt in a positive way. If we want to change the world we have to start off small and let it trickle out amounst those willing to accept change and then build a strong foundation around them.”</blockquote>
   <div class="featured-meta">Glenn Baroni · Personal Growth</div>
+</div>
+
+
+<div class="featured-card reveal">
+  <blockquote>“Taking a lot away from this class. BELIEVE ME-I will look at things alot differently not just at work but in my personal life as well. Thank you for some very wise words of wisdom! And thanks to your team for all the hard work they do everyday! Great class!”</blockquote>
+  <div class="featured-meta">Holly Abbott · Leadership</div>
+</div>
+
+<div class="featured-card reveal">
+  <blockquote>“I thought this class was great and I hope to use this everyday both at work and more importantly in my personal life.”</blockquote>
+  <div class="featured-meta">Michael Adams · Personal Growth</div>
 </div>
 
 </div>

@@ -914,3 +914,75 @@
   }
   .belief-value:last-child { border-bottom: none; }
 }
+
+/* ── WHAT PEOPLE REMEMBER HEADLINE SCALE FIX ──
+   This version stops forcing the word "people" onto its own line.
+   It only treats the orange/script line as the second line. */
+
+.what-people-remember h1,
+.what-people-remember h2,
+.testimonials-hero h1,
+.testimonials-hero h2,
+.memory-headline,
+.remember-headline,
+[class*="remember"] h1,
+[class*="remember"] h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.65vw, 38px) !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.035em;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Keep normal headline spans inline so "people" can stay on the white line. */
+.what-people-remember h1 span,
+.what-people-remember h2 span,
+.testimonials-hero h1 span,
+.testimonials-hero h2 span,
+.memory-headline span,
+.remember-headline span,
+[class*="remember"] h1 span,
+[class*="remember"] h2 span {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 0;
+}
+
+/* Only the orange emphasis becomes line two. */
+.what-people-remember h1 em,
+.what-people-remember h2 em,
+.testimonials-hero h1 em,
+.testimonials-hero h2 em,
+.memory-headline em,
+.remember-headline em,
+.memory-headline .script-line,
+.remember-headline .script-line,
+[class*="remember"] h1 em,
+[class*="remember"] h2 em,
+[class*="remember"] .script-line {
+  display: block !important;
+  color: var(--copper) !important;
+  font-style: italic;
+  font-size: 0.62em !important;
+  line-height: 0.98 !important;
+  margin-top: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .what-people-remember h1,
+  .what-people-remember h2,
+  .testimonials-hero h1,
+  .testimonials-hero h2,
+  .memory-headline,
+  .remember-headline,
+  [class*="remember"] h1,
+  [class*="remember"] h2 {
+    font-size: clamp(22px, 6.4vw, 32px) !important;
+    max-width: 94vw;
+  }
+}
