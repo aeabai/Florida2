@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Share Your Experience | Dynamic Exchange</title>
+<meta name="description" content="Share feedback about your experience with Anthony and Dynamic Exchange. Submissions are reviewed before anything is added to the website."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+
+<link href="css/base.css" rel="stylesheet"/>
+<link href="css/nav.css" rel="stylesheet"/>
+<link href="css/pages.css" rel="stylesheet"/>
+<link href="images/dynamic-exchange-mark.png" rel="icon" type="image/png"/>
+
+<style>
+.share-form-hero {
+  background: var(--charcoal);
+  padding: 140px 0 90px;
+  text-align: center;
+}
+.share-form-hero h1 {
+  font-size: clamp(42px, 6vw, 74px);
+  color: var(--offwhite);
+  margin-bottom: 22px;
+}
+.share-form-hero h1 em {
+  color: var(--copper);
+}
+.share-form-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--light);
+  font-size: 19px;
+  line-height: 1.8;
+}
+.share-form-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #fff;
+  padding: clamp(28px, 5vw, 52px);
+  border-top: 5px solid var(--copper);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+.share-form-intro {
+  margin-bottom: 32px;
+}
+.share-form-intro p {
+  color: var(--mid);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.share-field {
+  margin-bottom: 22px;
+}
+.share-field label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.share-field input,
+.share-field select,
+.share-field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--charcoal);
+  background: var(--warm-white);
+  border: 1px solid rgba(0,0,0,0.14);
+  padding: 14px 16px;
+}
+.share-field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.share-help {
+  font-size: 13px;
+  color: var(--mid);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.share-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 26px 0;
+}
+.share-checkbox input {
+  margin-top: 5px;
+}
+.share-checkbox label {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--mid);
+}
+.share-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.share-note {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .share-form-hero { padding: 120px 24px 76px; }
+  .share-actions .btn { width: 100%; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+<nav aria-label="Main navigation" class="nav">
+<div class="nav-inner">
+<a class="nav-brand" href="index.html"><img alt="" class="nav-brand-mark" src="images/dynamic-exchange-mark.png"/><span>Dynamic Exchange</span></a>
+<ul class="nav-links" role="list">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="coaching.html">Coaching</a></li>
+<li><a href="youth.html">Youth</a></li>
+<li><a href="reentry.html">Reentry</a></li>
+<li><a href="speaking.html">Speaking</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li class="nav-cta"><a href="contact.html">Get in Touch</a></li>
+</ul>
+<button aria-controls="nav-drawer" aria-expanded="false" aria-label="Open menu" class="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+
+<nav aria-label="Mobile navigation" class="nav-drawer" id="nav-drawer">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="coaching.html">Track 1: Coaching</a>
+<a href="youth.html">Track 2: Youth</a>
+<a href="reentry.html">Track 3: Reentry</a>
+<a href="speaking.html">Speaking</a>
+<a href="testimonials.html">Testimonials</a>
+<div class="nav-drawer-cta"><a href="contact.html">Get in Touch</a></div>
+</nav>
+
+<section class="share-form-hero">
+<div class="container">
+<span class="eyebrow eyebrow--light">Share Your Experience</span>
+<h1>Your words matter.<br><em>So does how we use them.</em></h1>
+<p>This is a place to share what you remember from working with Anthony, attending a workshop, participating in a program, or being part of a conversation that stayed with you.</p>
+</div>
+</section>
+
+<section class="section section--white">
+<div class="container">
+<div class="share-form-wrap reveal">
+<div class="share-form-intro">
+<span class="eyebrow">Before You Submit</span>
+<p>Nothing submitted here is automatically published. Anthony reviews each submission before anything is cleaned up, categorized, quoted, or added to the testimonial library.</p>
+</div>
+
+<form action="mailto:aeabaldwin@outlook.com?subject=Dynamic%20Exchange%20Testimonial%20Submission" method="POST" enctype="text/plain">
+<div class="share-field">
+<label for="name">Your Name</label>
+<input id="name" name="Name" type="text" placeholder="Your name"/>
+</div>
+
+<div class="share-field">
+<label for="email">Email Address</label>
+<input id="email" name="Email" type="email" placeholder="you@example.com"/>
+<div class="share-help">Used only if Anthony needs to follow up or clarify something.</div>
+</div>
+
+<div class="share-field">
+<label for="connection">How We Worked Together</label>
+<select id="connection" name="Connection">
+<option value="">Choose one</option>
+<option>Leadership workshop</option>
+<option>Coaching session</option>
+<option>Youth program</option>
+<option>Reentry program</option>
+<option>Speaking event</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="share-field">
+<label for="category">What This Mostly Speaks To</label>
+<select id="category" name="Suggested Category">
+<option value="">Choose one if it fits</option>
+<option>Leadership</option>
+<option>Personal Growth</option>
+<option>Communication</option>
+<option>Team Development</option>
+<option>Perspective Shift</option>
+<option>Emotional Impact</option>
+<option>Purpose</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="share-field">
+<label for="testimonial">What Would You Like To Share?</label>
+<textarea id="testimonial" name="Testimonial" placeholder="Write it in your own words. It does not need to be polished."></textarea>
+</div>
+
+<div class="share-field">
+<label for="permission">Display Preference</label>
+<select id="permission" name="Display Preference">
+<option value="">Choose one</option>
+<option>You may use my full name</option>
+<option>You may use my first name only</option>
+<option>You may use this anonymously</option>
+<option>Please contact me before using anything publicly</option>
+</select>
+</div>
+
+<div class="share-checkbox">
+<input id="review" name="Review Acknowledgment" type="checkbox" value="I understand this submission will be reviewed before publication"/>
+<label for="review">I understand this submission will be reviewed before anything is added to the website.</label>
+</div>
+
+<div class="share-actions">
+<button class="btn btn--primary" type="submit">Send Submission</button>
+<a class="btn btn--outline-dark" href="testimonials.html">Back to Testimonials</a>
+</div>
+
+<div class="share-note">
+This temporary form opens your email app to send the submission for review. A more automated intake system can be added later when the full testimonial workflow is ready.
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<footer class="signoff">
+<p>You Matter To Me.</p>
+<small>Anthony · Executive Coach &amp; Mentor · Dynamic Exchange</small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
