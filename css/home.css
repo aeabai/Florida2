@@ -856,7 +856,20 @@
     gap: 40px;
   }
 
-  .story-sidebar { position: static; }
+  .story-sidebar {
+    position: static;
+    width: min(72vw, 260px);
+    margin: 0 auto 24px;
+  }
+
+  .story-photo {
+    max-width: 260px;
+    margin: 0 auto 12px;
+  }
+
+  .story-caption {
+    text-align: center;
+  }
 
   .tracks-home-grid { grid-template-columns: 1fr; gap: 0; }
 
