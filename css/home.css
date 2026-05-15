@@ -405,6 +405,9 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2px;
   margin-top: 64px;
+  max-width: 1180px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .track-home-card {
@@ -415,6 +418,7 @@
   overflow: hidden;
   transition: transform 0.3s;
   cursor: default;
+  min-width: 0;
 }
 
 .track-home-card:nth-child(2) { border-color: var(--blue); }
