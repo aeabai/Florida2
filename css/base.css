@@ -16,8 +16,11 @@
   --copper-lt:  #E8936A;
   --blue:       #4A6FA5;
   --blue-lt:    #D0DDEF;
-  --green:      #2D5A3D;
-  --green-lt:   #C8DDD0;
+  --green:      #2D6F6A;
+  --green-lt:   #D7ECE9;
+  --track-youth:       #2D6F6A;
+  --track-youth-glow:  rgba(45, 111, 106, 0.55);
+  --track-youth-light: #D7ECE9;
   --offwhite:   #F5F1EB;
   --warm-white: #FDFAF6;
   --mid:        #6B6560;

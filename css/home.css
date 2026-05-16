@@ -411,8 +411,8 @@
 }
 
 .track-home-card {
-  --track-band-color: #152E2E; /* Youth page hero banner */
-  --track-band-glow: rgba(21, 46, 46, 0.34);
+  --track-band-color: var(--track-youth); /* Youth track band */
+  --track-band-glow: var(--track-youth-glow);
   background: var(--charcoal);
   padding: 52px 40px 48px;
   position: relative;
@@ -471,7 +471,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--track-youth-light);
   margin-bottom: 8px;
   display: block;
 }
@@ -500,7 +500,7 @@
 .track-home-divider {
   width: 40px;
   height: 3px;
-  background: var(--copper);
+  background: var(--track-youth);
   margin-bottom: 24px;
 }
 
@@ -526,7 +526,7 @@
 
 .track-home-list li::before {
   content: '→';
-  color: var(--copper);
+  color: var(--track-youth-light);
   flex-shrink: 0;
   font-weight: 600;
 }
@@ -540,9 +540,9 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--track-youth-light);
   text-decoration: none;
-  border-bottom: 2px solid var(--copper);
+  border-bottom: 2px solid var(--track-youth-light);
   padding-bottom: 2px;
   transition: opacity 0.2s;
   display: inline-block;
@@ -645,7 +645,7 @@
 }
 
 /* Mission bar colors follow locked track order: Youth → Reentry → Coaching */
-.mission-seg--youth { background: #152E2E; }
+.mission-seg--youth { background: var(--track-youth); }
 .mission-seg--reentry { background: #3A1A10; }
 .mission-seg--coaching { background: var(--copper); }
 
@@ -680,10 +680,9 @@
   border-top: 4px solid;
 }
 
-/* Impact card bands follow locked order: Youth → Reentry → Coaching */
-.impact-card:nth-child(1) { border-color: #152E2E; }
-.impact-card:nth-child(2) { border-color: #3A1A10; }
-.impact-card:nth-child(3) { border-color: var(--copper); }
+.impact-card:nth-child(1) { border-color: #2D6F6A; }
+.impact-card:nth-child(2) { border-color: #5A1F0D; }
+.impact-card:nth-child(3) { border-color: #C4622D; }
 
 .impact-icon {
   font-size: 28px;

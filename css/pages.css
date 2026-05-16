@@ -48,7 +48,7 @@
 
 /* Track-colored hero variants */
 .page-hero--blue  { background: #2B3F60; }
-.page-hero--green { background: #1A3828; }
+.page-hero--green { background: var(--track-youth); }
 
 /* ── PHOTO ZONES (interior pages) ── */
 .page-photo {
