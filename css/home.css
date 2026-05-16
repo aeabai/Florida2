@@ -675,40 +675,18 @@
 }
 
 .impact-card {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0) 58%),
-    var(--offwhite);
-  padding: 36px 32px 34px;
-  border-top: 0;
-  border-radius: 4px;
-  box-shadow: 0 14px 30px rgba(30, 30, 30, 0.08);
-  position: relative;
-  overflow: hidden;
+  background: var(--offwhite);
+  padding: 32px 28px;
+  border-top: 4px solid;
 }
 
-.impact-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 7px;
-  background: var(--impact-band-color);
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 8px 16px var(--impact-band-glow);
-  pointer-events: none;
-}
-
-
-.impact-card:nth-child(1) { border-color: var(--track-youth); }
-.impact-card:nth-child(2) { border-color: var(--track-reentry); }
-.impact-card:nth-child(3) { border-color: var(--track-coaching); }
+.impact-card:nth-child(1) { border-color: #2D6F6A; }
+.impact-card:nth-child(2) { border-color: #5A1F0D; }
+.impact-card:nth-child(3) { border-color: #C4622D; }
 
 .impact-icon {
-  font-size: 30px;
-  margin-bottom: 22px;
-  position: relative;
-  z-index: 1;
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
 .impact-card h3 {
@@ -717,8 +695,6 @@
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--charcoal);
-  position: relative;
-  z-index: 1;
 }
 
 .impact-card p {
@@ -726,8 +702,6 @@
   font-size: 15px;
   color: var(--mid);
   line-height: 1.7;
-  position: relative;
-  z-index: 1;
 }
 
 /* ── PHILOSOPHY ── */
