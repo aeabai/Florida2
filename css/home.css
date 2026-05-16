@@ -680,9 +680,10 @@
   border-top: 4px solid;
 }
 
-.impact-card:nth-child(1) { border-color: var(--copper); }
-.impact-card:nth-child(2) { border-color: var(--blue); }
-.impact-card:nth-child(3) { border-color: var(--green); }
+/* Impact card bands follow locked order: Youth → Reentry → Coaching */
+.impact-card:nth-child(1) { border-color: #152E2E; }
+.impact-card:nth-child(2) { border-color: #3A1A10; }
+.impact-card:nth-child(3) { border-color: var(--copper); }
 
 .impact-icon {
   font-size: 28px;
