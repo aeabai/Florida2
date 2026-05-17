@@ -636,3 +636,134 @@
   .stat-cards { grid-template-columns: 1fr; }
   .page-hero { padding: 60px 0 52px; }
 }
+
+/* ─────────────────────────────────────────────
+   VISUAL TIGHTENING PASS — interior page scale only
+   2026-05-16
+───────────────────────────────────────────── */
+.page-hero {
+  padding: 64px 0 58px;
+}
+
+.page-hero h1 {
+  font-size: clamp(36px, 4.6vw, 60px);
+  margin-bottom: 18px;
+}
+
+.page-hero-sub {
+  font-size: 17px;
+  line-height: 1.58;
+}
+
+.page-photo {
+  height: 360px;
+}
+
+.prose h2 {
+  font-size: 30px;
+  margin-top: 36px;
+  margin-bottom: 14px;
+}
+
+.prose h3 {
+  font-size: 22px;
+  margin-top: 28px;
+}
+
+.prose p {
+  font-size: 16.5px;
+  line-height: 1.68;
+  margin-bottom: 16px;
+}
+
+.prose ul {
+  margin-bottom: 16px;
+}
+
+.two-col {
+  gap: 44px;
+}
+
+.feature-list {
+  margin-top: 18px;
+}
+
+.feature-item {
+  padding: 12px 0;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+}
+
+.program-grid,
+.format-grid,
+.stat-cards,
+.faq-list {
+  margin-top: 30px;
+}
+
+.program-card,
+.format-card {
+  padding: 26px 22px;
+}
+
+.program-card h3,
+.format-card h3 {
+  font-size: 20px;
+}
+
+.format-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.stat-card {
+  padding: 30px 22px;
+}
+
+.stat-card-num {
+  font-size: 42px;
+}
+
+.cta-strip {
+  padding: 58px 0;
+}
+
+.cta-strip h2 {
+  font-size: clamp(30px, 3.4vw, 42px);
+}
+
+.cta-strip p {
+  margin-bottom: 28px;
+}
+
+.pricing-grid {
+  margin-top: 34px;
+}
+
+.pricing-card {
+  padding: 32px 24px;
+}
+
+.faq-item {
+  padding: 18px 0;
+}
+
+.thankyou-wrap {
+  padding: 64px var(--container-pad);
+}
+
+@media (max-width: 900px) {
+  .two-col { gap: 30px; }
+  .page-photo { height: 250px; }
+  .page-hero { padding: 54px 0 48px; }
+  .page-hero h1 { font-size: 38px; }
+}
+
+@media (max-width: 600px) {
+  .page-hero { padding: 46px 0 42px; }
+  .cta-strip { padding: 48px 0; }
+}

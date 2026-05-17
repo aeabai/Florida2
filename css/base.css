@@ -286,3 +286,51 @@ img {
     padding: 24px 20px;
   }
 }
+
+/* ─────────────────────────────────────────────
+   VISUAL TIGHTENING PASS — spacing and scale only
+   2026-05-16
+───────────────────────────────────────────── */
+:root {
+  --section-pad: 72px;
+  --container-pad: 36px;
+}
+
+.section-heading {
+  font-size: clamp(32px, 3.5vw, 50px);
+  margin-bottom: 18px;
+}
+
+.section-body {
+  font-size: 16.5px;
+  line-height: 1.68;
+}
+
+.pull-quote {
+  margin: 28px 0;
+  padding: 26px 28px 26px 40px;
+}
+
+.pull-quote p {
+  font-size: 18px;
+  line-height: 1.52;
+}
+
+.btn {
+  padding: 12px 26px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --section-pad: 54px;
+    --container-pad: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --section-pad: 42px;
+    --container-pad: 20px;
+  }
+  .section-heading { font-size: clamp(28px, 8vw, 38px); }
+}
