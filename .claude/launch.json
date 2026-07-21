@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "florida2-site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3456", "."],
-      "port": 3456
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/serve.ps1", "-Port", "8743"],
+      "port": 8743,
+      "autoPort": true
     }
   ]
 }
