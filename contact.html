@@ -187,11 +187,12 @@
 <div class="eyebrow">The Form</div>
 <h2 style="font-family:var(--font-display); font-size:30px; color:var(--charcoal); margin-bottom:32px;">Tell him what you're looking for</h2>
 <div class="form-wrap" style="max-width:100%;">
-<form data-netlify="true" id="contact-form" method="POST" name="contact" netlify-honeypot="bot-field" novalidate="">
+<form action="https://formspree.io/f/xoeqegzq" id="contact-form" method="POST" name="contact" novalidate="">
 <!-- Honeypot for spam -->
 <div style="display:none;">
-<label>Don't fill this out: <input name="bot-field"/></label>
+<label>Don't fill this out: <input name="_gotcha"/></label>
 </div>
+<div class="form-submit-error" role="alert" style="display:none; background:#FBEAEA; border:1px solid #D9534F; color:#9B2C2C; padding:14px 16px; border-radius:6px; margin-bottom:20px; font-family:'Lora',serif; font-size:14px;">Something went wrong sending your message. Please try again, or email <a href="mailto:anthony@dynamicexchange.org" style="color:#9B2C2C; text-decoration:underline;">anthony@dynamicexchange.org</a> directly.</div>
 <div class="form-group">
 <label for="name">Full Name <span aria-hidden="true">*</span></label>
 <input autocomplete="name" id="name" name="name" placeholder="Your name" required="" type="text"/>

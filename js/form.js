@@ -68,6 +68,9 @@
   }
 
   /* ── Submit handler ── */
+  var submitBtn = form.querySelector('.form-submit button[type="submit"]');
+  var submitError = form.querySelector('.form-submit-error');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -94,10 +97,33 @@
       return;
     }
 
-    // ── Successful submit ──
-    // For static hosting: redirect to thank-you page
-    // For Netlify: form data is handled by Netlify Forms attribute
-    window.location.href = 'thank-you.html';
+    if (submitError) submitError.style.display = 'none';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
+
+    // ── Actually send the message to Formspree ──
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        throw new Error('Form submission failed with status ' + response.status);
+      }
+    }).catch(function () {
+      if (submitError) {
+        submitError.style.display = 'block';
+        submitError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message →';
+      }
+    });
   });
 
 })();
