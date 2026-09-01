@@ -1,0 +1,14 @@
+# Normalize line endings for everyone, regardless of OS or editor.
+# Text files are stored in git with LF, and checked out with LF too —
+# this stops Windows editors from silently flipping files to CRLF.
+* text=auto eol=lf
+
+# Binary files — never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.zip binary
