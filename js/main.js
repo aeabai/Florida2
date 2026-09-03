@@ -103,12 +103,48 @@
     });
   }
 
+  /* Follow the philosophy copy, then stop at the section bottom. */
+  function initPhilosophyRoadmap() {
+    var layout = document.querySelector('.philosophy-layout');
+    var roadmap = document.querySelector('.philosophy-roadmap');
+    if (!layout || !roadmap) return;
+
+    var ticking = false;
+
+    function updateRoadmap() {
+      ticking = false;
+
+      if (window.innerWidth <= 900) {
+        roadmap.style.transform = '';
+        return;
+      }
+
+      var layoutTop = layout.getBoundingClientRect().top + window.scrollY;
+      var start = layoutTop - 88;
+      var maximum = Math.max(0, layout.offsetHeight - roadmap.offsetHeight);
+      var distance = Math.min(maximum, Math.max(0, window.scrollY - start));
+      roadmap.style.transform = 'translateY(' + distance + 'px)';
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateRoadmap);
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    window.addEventListener('load', requestUpdate);
+    updateRoadmap();
+  }
+
   /* ── INIT ── */
   document.addEventListener('DOMContentLoaded', function () {
     setActiveNav();
     initNavScroll();
     initMobileNav();
     initScrollReveal();
+    initPhilosophyRoadmap();
   });
 
 })();

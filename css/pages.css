@@ -197,10 +197,10 @@
 
 /* Keep the About-page roadmap visible while its philosophy section scrolls. */
 .philosophy-roadmap {
-  position: sticky;
-  top: 88px;
+  position: relative;
   align-self: start;
   height: fit-content;
+  will-change: transform;
 }
 
 /* ── FEATURE BLOCKS ── */
