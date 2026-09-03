@@ -195,6 +195,7 @@
   position: sticky;
   top: 88px;
   align-self: start;
+  height: fit-content;
 }
 
 /* ── FEATURE BLOCKS ── */
