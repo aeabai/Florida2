@@ -190,6 +190,13 @@
 .two-col--center { align-items: center; }
 .about-story-layout { grid-template-columns: 1fr 1fr; }
 
+/* Keep the About-page roadmap visible while its philosophy section scrolls. */
+.philosophy-roadmap {
+  position: sticky;
+  top: 88px;
+  align-self: start;
+}
+
 /* ── FEATURE BLOCKS ── */
 .feature-list {
   list-style: none;
@@ -622,6 +629,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .two-col           { grid-template-columns: 1fr; gap: 36px; }
+  .philosophy-roadmap { position: static; }
   .pricing-grid      { grid-template-columns: 1fr; }
   .pricing-card.featured { transform: none; }
   .program-grid      { grid-template-columns: 1fr; }
