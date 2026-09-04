@@ -173,18 +173,18 @@
 <input name="_next" type="hidden" value="https://aeabai.github.io/Florida2/thank-you.html"/>
 <div class="share-field">
 <label for="name">Your Name</label>
-<input id="name" name="Name" type="text" placeholder="Your name"/>
+<input id="name" name="Name" type="text" placeholder="Your name" required/>
 </div>
 
 <div class="share-field">
 <label for="email">Email Address</label>
-<input id="email" name="Email" type="email" placeholder="you@example.com"/>
+<input id="email" name="Email" type="email" placeholder="you@example.com" required/>
 <div class="share-help">Used only if Anthony needs to follow up or clarify something.</div>
 </div>
 
 <div class="share-field">
 <label for="connection">How We Worked Together</label>
-<select id="connection" name="Connection">
+<select id="connection" name="Connection" required>
 <option value="">Choose one</option>
 <option>Leadership workshop</option>
 <option>Coaching session</option>
@@ -197,8 +197,8 @@
 
 <div class="share-field">
 <label for="category">What This Mostly Speaks To</label>
-<select id="category" name="Suggested Category">
-<option value="">Choose one if it fits</option>
+<select id="category" name="Suggested Category" required>
+<option value="">Choose one</option>
 <option>Leadership</option>
 <option>Personal Growth</option>
 <option>Communication</option>
@@ -212,12 +212,12 @@
 
 <div class="share-field">
 <label for="testimonial">What Would You Like To Share?</label>
-<textarea id="testimonial" name="Testimonial" placeholder="Write it in your own words. It does not need to be polished."></textarea>
+<textarea id="testimonial" name="Testimonial" placeholder="Write it in your own words. It does not need to be polished." required></textarea>
 </div>
 
 <div class="share-field">
 <label for="permission">Display Preference</label>
-<select id="permission" name="Display Preference">
+<select id="permission" name="Display Preference" required>
 <option value="">Choose one</option>
 <option>You may use my full name</option>
 <option>You may use my first name only</option>
@@ -227,7 +227,7 @@
 </div>
 
 <div class="share-checkbox">
-<input id="review" name="Review Acknowledgment" type="checkbox" value="I understand this submission will be reviewed before publication"/>
+<input id="review" name="Review Acknowledgment" type="checkbox" value="I understand this submission will be reviewed before publication" required/>
 <label for="review">I understand this submission will be reviewed before anything is added to the website.</label>
 </div>
 

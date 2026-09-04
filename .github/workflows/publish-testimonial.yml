@@ -1,0 +1,56 @@
+name: Publish approved testimonial
+
+on:
+  workflow_dispatch:
+    inputs:
+      display_name:
+        description: Public name exactly as approved
+        required: true
+        type: string
+      category:
+        description: Approved testimonial category
+        required: true
+        type: choice
+        options:
+          - Leadership
+          - Personal Growth
+          - Communication
+          - Team Development
+          - Perspective Shift
+          - Emotional Impact
+          - Purpose
+          - General Impact
+          - Other
+      testimonial:
+        description: Approved testimonial text only
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Add approved testimonial
+        env:
+          TESTIMONIAL_DISPLAY_NAME: ${{ inputs.display_name }}
+          TESTIMONIAL_CATEGORY: ${{ inputs.category }}
+          TESTIMONIAL_QUOTE: ${{ inputs.testimonial }}
+        run: node scripts/publish-testimonial.mjs
+
+      - name: Publish website update
+        run: |
+          if git diff --quiet; then
+            echo "Testimonial already exists; no update needed."
+            exit 0
+          fi
+          git config user.name "Dynamic Exchange approvals"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/approved-testimonials.json
+          git commit -m "Publish approved testimonial"
+          git push
