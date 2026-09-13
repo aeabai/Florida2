@@ -33,13 +33,20 @@
     .btn--primary:hover { background: var(--green); border-color: var(--green); }
     .section--warm .btn--primary { background: transparent; border-color: #3A1A10; color: #3A1A10; }
     .section--warm .btn--primary:hover { background: #3A1A10; border-color: #3A1A10; color: #fff; }
-    .partner-tag { background: rgba(45,90,61,0.08); color: var(--green); border-color: rgba(45,90,61,0.2); padding: 8px 14px; }
-    .partner-list { gap: 8px; }
+    .partner-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .partner-tag { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; background: rgba(45,90,61,0.08); color: var(--green); border-color: rgba(45,90,61,0.2); padding: 16px; text-transform: none; letter-spacing: 0; }
+    .partner-tag strong { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.8px; line-height: 1.3; text-transform: uppercase; }
+    .partner-tag a { color: var(--rust2); font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.35; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .partner-tag a:hover { color: var(--green); }
+    .partner-note { color: var(--mid); font-size: 13px; margin: -4px 0 16px; }
     .stat-card-num { color: var(--rust2) !important; }
     .two-col .page-photo { height: 600px; background: #1a0f0a; }
     .two-col .page-photo img.photo-slot { object-fit: cover !important; }
     @media (max-width: 900px) {
       .two-col .page-photo { height: 420px; }
+    }
+    @media (max-width: 700px) {
+      .partner-list { grid-template-columns: 1fr; }
     }
   </style>
 <link href="images/dynamic-exchange-mark.png" rel="icon" type="image/png"/>
@@ -169,13 +176,38 @@
 <h3>Partner Organizations</h3>
 <p>I am working to build relationships with organizations that have access to incarcerated and reentry populations:</p>
 </div>
+<p class="partner-note">Prospective partnership resources near Lakeland and across Central Florida. Links open official organization websites.</p>
 <div class="partner-list reveal">
-<span class="partner-tag">State &amp; Federal Correctional Facilities</span>
-<span class="partner-tag">Reentry Organizations</span>
-<span class="partner-tag">Faith-Based Prison Ministries</span>
-<span class="partner-tag">Halfway Houses &amp; Transitional Housing</span>
-<span class="partner-tag">Workforce Reentry Programs</span>
-<span class="partner-tag">Probation &amp; Parole Support Services</span>
+<div class="partner-tag">
+<strong>State &amp; Federal Correctional Facilities</strong>
+<a href="https://www.fdc.myflorida.com/institutions/institutions-list" rel="noopener noreferrer" target="_blank">Florida DOC institutions directory — find Polk Correctional Institution</a>
+<a href="https://www.bop.gov/locations/search.jsp?facilityType=FCC&amp;name=Coleman&amp;q=FCC+Coleman" rel="noopener noreferrer" target="_blank">Federal Bureau of Prisons — FCC Coleman</a>
+</div>
+<div class="partner-tag">
+<strong>Reentry Organizations</strong>
+<a href="https://www.polksheriff.org/news-investigations/polk-county-news/2024/02/21/breaking-down-silos-new-groundbreaking-behavioral-health-treatment-program-launched-in-polk-county-jails" rel="noopener noreferrer" target="_blank">Polk County STARR reentry program</a>
+<a href="https://abebrown.org/insphire/" rel="noopener noreferrer" target="_blank">Abe Brown Ministries — inspHire</a>
+</div>
+<div class="partner-tag">
+<strong>Faith-Based Prison Ministries</strong>
+<a href="https://www.kairosfl.org/programs.html" rel="noopener noreferrer" target="_blank">Kairos Prison Ministry of Florida</a>
+<a href="https://abebrown.org/" rel="noopener noreferrer" target="_blank">Abe Brown Ministries</a>
+</div>
+<div class="partner-tag">
+<strong>Halfway Houses &amp; Transitional Housing</strong>
+<a href="https://talbothouse.org/solutions-2/" rel="noopener noreferrer" target="_blank">Talbot House Ministries — housing &amp; residential programs</a>
+<a href="https://www.lighthousemin.org/services" rel="noopener noreferrer" target="_blank">Lighthouse Ministries — residential services</a>
+</div>
+<div class="partner-tag">
+<strong>Workforce Reentry Programs</strong>
+<a href="https://abebrown.org/insphire-become-a-business-partner/" rel="noopener noreferrer" target="_blank">inspHire employer partnerships</a>
+<a href="https://talbothouse.org/solutions-2/" rel="noopener noreferrer" target="_blank">Talbot House Solutions employment program</a>
+</div>
+<div class="partner-tag">
+<strong>Probation &amp; Parole Support Services</strong>
+<a href="https://www.jud10.flcourts.org/node/1039?q=contacts" rel="noopener noreferrer" target="_blank">Polk County probation contacts — Lakeland</a>
+<a href="https://www.jud10.flcourts.org/polk-courthouse?q=problem-solving-court" rel="noopener noreferrer" target="_blank">Polk County Problem Solving Court</a>
+</div>
 </div>
 </div>
 </section>
